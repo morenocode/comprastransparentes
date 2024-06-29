@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Compras Municipales menores a 8 UITS</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Sistema de Gestión de Compras Municipales menores a 8 UITS</h1>
+    </header>
+
+    <main>
+        <section id="form-section">
+            <h2>Registrar Nueva Necesidad</h2>
+            <form id="necesidadForm">
+                <label for="department">Departamento:</label>
+                <input type="text" id="department" name="department" required>
+
+                <label for="item">Nombre del Ítem:</label>
+                <input type="text" id="item" name="item" required>
+
+                <label for="quantity">Cantidad:</label>
+                <input type="number" id="quantity" name="quantity" required>
+
+                <button type="submit">Registrar Necesidad</button>
+            </form>
+            <div id="message" class="hidden"></div>
+        </section>
+
+        <section id="cotizacion-section">
+            <h2>Solicitudes de Cotización</h2>
+            <p>Haz clic en "Agregar Cotización" para añadir cotizaciones. Haz clic en "Aprobar" para aprobar una cotización.</p>
+            <ul id="cotizacionesList"></ul>
+        </section>
+
+        <section id="result-section">
+            <h2>Compras Registradas</h2>
+            <input type="text" id="search" placeholder="Buscar compras...">
+            <ul id="comprasList"></ul>
+        </section>
+
+        <script src="script.js"></script>
+    </main>
+</body>
+
+</html>
